@@ -9,7 +9,8 @@ public class DataStructuresMain {
 //		OrderedList.orderedList();
 //		BalancedParenthesis.balancedParenthesis();
 //		BankingCashCounter.bankingCashCounter();
-		PalindromeChecker.palindromeChecker();
+//		PalindromeChecker.palindromeChecker();
+		HashingFunction.hashingFunction();
 	}
 
 }

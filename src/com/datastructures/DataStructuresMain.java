@@ -11,7 +11,8 @@ public class DataStructuresMain {
 //		BankingCashCounter.bankingCashCounter();
 //		PalindromeChecker.palindromeChecker();
 //		HashingFunction.hashingFunction();
-		Prime2DArray.prime2DArray();
+//		Prime2DArray.prime2DArray();
+		PrimeAnagram.primeAnagram();
 	}
 
 }

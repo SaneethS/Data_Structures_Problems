@@ -10,7 +10,8 @@ public class DataStructuresMain {
 //		BalancedParenthesis.balancedParenthesis();
 //		BankingCashCounter.bankingCashCounter();
 //		PalindromeChecker.palindromeChecker();
-		HashingFunction.hashingFunction();
+//		HashingFunction.hashingFunction();
+		Prime2DArray.prime2DArray();
 	}
 
 }

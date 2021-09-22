@@ -12,7 +12,8 @@ public class DataStructuresMain {
 //		PalindromeChecker.palindromeChecker();
 //		HashingFunction.hashingFunction();
 //		Prime2DArray.prime2DArray();
-		PrimeAnagram.primeAnagram();
+//		PrimeAnagram.primeAnagram();
+		PrimeAnagramStack.primeAnagramStack();
 	}
 
 }

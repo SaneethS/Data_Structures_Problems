@@ -13,7 +13,8 @@ public class DataStructuresMain {
 //		HashingFunction.hashingFunction();
 //		Prime2DArray.prime2DArray();
 //		PrimeAnagram.primeAnagram();
-		PrimeAnagramStack.primeAnagramStack();
+//		PrimeAnagramStack.primeAnagramStack();
+		PrimeAnagramQueue.primeAnagramQueue();
 	}
 
 }

@@ -2,48 +2,62 @@ package com.queue;
 
 public class Queue<T> {
 	
-	String queue[]= new String[2000];
-	int front;
-	int rear;
-	int size;
-	T data;
-	
-	public void enqueue(T data){
-		queue[rear]= (String) data;
-		rear++;
-		size++;
-	}
-	
-	public String dequeue(){
-		String a = queue[front];
-		front++;
-		size--;
+	Node<T> front;
+	Node<T> rear;
+	int count = 0;
 
-		return a;
+	@SuppressWarnings("hiding")
+	class Node<T> {
+		T data;
+		Node<T> next;
 
+		Node(T data) {
+			this.data = data;
+			this.next = null;
+		}
 	}
+
 	
-	public int size() {
-		return size;
+	public Queue() {
+		this.front = null;
+		this.rear = null;
 	}
+
 	
-	public boolean isEmpty() {
-		return size == 0;
-	}
-	
-	public boolean isFull(){
-		return size == 100;
-	}
-	
-	public void print() {
-		if(front == rear) {
-			System.out.println("Queue is empty");
+	public void enqueue(T item) {
+		Node<T> temp = new Node<T>(item);
+		if (rear == null) {
+			front = temp;
+			rear = temp;
+			count++;
 			return;
 		}
+		rear.next = temp;
+		rear = temp;
+		count++;
+	}
+	
+	public void dequeue() {
+		if(front == null)
+			return;
 		
-		for(int i = front ; i < rear ; i++) {
-			System.out.print(queue[i]+" ");
+		Node<T> temp = front;
+		front = front.next;
+		
+		if(front == null) {
+			rear = null;
 		}
+		
+		
 	}
 
+	
+	public void print() {
+		Node<T> node = this.front;
+		while (node.next != null) {
+			System.out.println("Data :" + node.data);
+			node = node.next;
+		}
+		System.out.print("Data :" + node.data);
+	}
 }

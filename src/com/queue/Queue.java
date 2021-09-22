@@ -2,19 +2,20 @@ package com.queue;
 
 public class Queue<T> {
 	
-	int queue[]= new int[100];
+	String queue[]= new String[2000];
 	int front;
 	int rear;
 	int size;
+	T data;
 	
 	public void enqueue(T data){
-		queue[rear]=(int) data;
+		queue[rear]= (String) data;
 		rear++;
 		size++;
 	}
 	
-	public int dequeue(){
-		int a = queue[front];
+	public String dequeue(){
+		String a = queue[front];
 		front++;
 		size--;
 
@@ -32,6 +33,17 @@ public class Queue<T> {
 	
 	public boolean isFull(){
 		return size == 100;
-	}	
+	}
+	
+	public void print() {
+		if(front == rear) {
+			System.out.println("Queue is empty");
+			return;
+		}
+		
+		for(int i = front ; i < rear ; i++) {
+			System.out.print(queue[i]+" ");
+		}
+	}
 
 }
